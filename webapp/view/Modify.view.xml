@@ -1,0 +1,115 @@
+<mvc:View xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="ProB.zcbProj006_3.controller.Modify">
+	<Shell id="shell4">
+		<App id="app5">
+			<pages>
+				<Page xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="page2" showNavButton="true" navButtonPress="action" action:wiring="\{'navButtonPress':\{'navigation':\{'routeName':'Main'\}\}\}">
+					<content>
+						<VBox class="sapUiSmallMargin">
+							<f:Form id="FormToolbar" editable="true" ariaLabelledBy="Title1">
+								<f:toolbar>
+									<Toolbar id="TB1">
+										<Title id="Title1" text="운송정보변경" level="H4" titleStyle="H4"/>
+										<Text xmlns="sap.m" text="{DOC_NUM}" id="DOC"/>
+										<content/>
+									</Toolbar>
+								</f:toolbar>
+								<f:layout>
+									<f:ResponsiveGridLayout labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false"/>
+								</f:layout>
+								<f:formContainers>
+									<f:FormContainer ariaLabelledBy="Title3">
+										<f:toolbar>
+											<Toolbar>
+												<Title id="Title3" text="정보" level="H5" titleStyle="H5"/>
+												<core:Icon id="icon0" size="1.5em" src="sap-icon://accept"/>
+											</Toolbar>
+										</f:toolbar>
+										<f:formElements>
+											<f:FormElement label="운송업체번호 / 운송업체명">
+												<f:fields>
+													<Input value="{CAR_NUM}" id="CAR_NUM" editable="false">
+														<layoutData>
+															<l:GridData span="XL2 L1 M3 S4"/>
+														</layoutData>
+													</Input>
+													<Input value="{CAR_NAME}" id="CAR_NAME"/>
+												</f:fields>
+											</f:FormElement>
+											<f:FormElement label="운송업체 전화번호">
+												<f:fields>
+													<Input id="CAR_TEL" value="{CAR_TEL}"/>
+												</f:fields>
+											</f:FormElement>
+										</f:formElements>
+									</f:FormContainer>
+									<f:FormContainer ariaLabelledBy="Title2">
+										<f:toolbar>
+											<Toolbar>
+												<Title id="Title2" text="운송업체" level="H5" titleStyle="H5"/>
+												<core:Icon id="icon1" size="1.5em" src="sap-icon://accept"/>
+											</Toolbar>
+										</f:toolbar>
+										<f:formElements>
+											<f:FormElement label="운송기사">
+												<f:fields>
+													<Input id="CAR_DRIVER" value="{CAR_DRIVER}" width="100%"/>
+												</f:fields>
+											</f:FormElement>
+											<f:FormElement id="element3" label="운송기사 연락처">
+												<f:fields>
+													<Input id="CAR_DRIVER_TEL" value="{CAR_DRIVER_TEL}" width="100%"/>
+												</f:fields>
+											</f:FormElement>
+											<f:FormElement id="element4_1571298179225" label="운송수단">
+												<f:fields>
+													<Input id="CAR_TRANSP" width="100%" value="{CAR_TRANSP}"/>
+												</f:fields>
+											</f:FormElement>
+										</f:formElements>
+									</f:FormContainer>
+									<f:FormContainer ariaLabelledBy="Title2">
+										<f:toolbar>
+											<Toolbar>
+												<Title id="Title4" text="가격" level="H5" titleStyle="H5"/>
+												<core:Icon id="icon2" size="1.5em" src="sap-icon://accept"/>
+												<Button icon="sap-icon://action-settings"/>
+											</Toolbar>
+										</f:toolbar>
+										<f:formElements>
+											<f:FormElement label="가격 / 통화">
+												<f:fields>
+													<Input id="CAR_PRICE" value="{CAR_PRICE}" width="100%"/>
+													<Input id="CAR_CUR" value="{CAR_CUR}" width="100%">
+														<layoutData>
+															<l:GridData span="XL2 L1 M3 S10"/>
+														</layoutData>
+													</Input>
+												</f:fields>
+											</f:FormElement>
+										</f:formElements>
+									</f:FormContainer>
+									<f:FormContainer title="Comment(Carrier)" id="container2">
+										<f:formElements>
+											<f:FormElement id="element4">
+												<Input value="{CARCOM_C}" id="CARCOM_C" width="100%"/>
+											</f:FormElement>
+										</f:formElements>
+									</f:FormContainer>
+									<f:FormContainer title="Comment(Owner)" id="container3">
+										<f:formElements>
+											<f:FormElement id="element6">
+												<Input value="{CARCOM_O}" id="CARCOM_O" editable="false"/>
+											</f:FormElement>
+										</f:formElements>
+									</f:FormContainer>
+								</f:formContainers>
+							</f:Form>
+						</VBox><VBox id="vbox1" width="100%" direction="Column"/>
+						<Button xmlns="sap.m" text="뒤로가기" id="button3" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Main'\}\}\}"/>
+						<Button xmlns="sap.m" text="변경요청" id="button4" press="create"/>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</Shell>
+</mvc:View>
